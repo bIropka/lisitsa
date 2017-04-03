@@ -19,10 +19,12 @@ $(document).ready(function() {
                 if ($(window).scrollTop() > 500) {
 
                     $('header[role="banner"]').css('top', '0px');
+                    $('.arrow-top').fadeIn();
 
                 } else {
 
                     $('header[role="banner"]').css('top', '-300px');
+                    $('.arrow-top').fadeOut();
 
                 }
 
@@ -60,28 +62,9 @@ $(document).ready(function() {
         $('.header-nav').appendTo('.header-data');
     }
 
-    /*if($(window).width() < 768) {
-     $('header .header-links').appendTo('.mobile-nav');
-     $('.header-contacts .hours').appendTo('.mobile-nav');
-     $('.header-contacts .callback').appendTo('.mobile-nav');
-     } else {
-     $('.header-links').insertBefore('.header-contacts');
-     $('.mobile-nav .callback').prependTo('.header-contacts');
-     $('.mobile-nav .hours').prependTo('.header-contacts');
-     }*/
-
     $(window).resize(function() {
 
         checkHeader();
-        /*if($(window).width() < 768) {
-            $('header .header-links').appendTo('.mobile-nav');
-            $('.header-contacts .hours').appendTo('.mobile-nav');
-            $('.header-contacts .callback').appendTo('.mobile-nav');
-        } else {
-            $('.header-links').insertBefore('.header-contacts');
-            $('.mobile-nav .callback').prependTo('.header-contacts');
-            $('.mobile-nav .hours').prependTo('.header-contacts');
-        }*/
 
         if($(window).width() < 1261) {
             $('.nav-ul').appendTo('.mobile-nav');
@@ -101,6 +84,13 @@ $(document).ready(function() {
     /*******************************************************************************************************************
      *********** clicks
      ******************************************************************************************************************/
+
+    $('.arrow-top').click(function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 600);
+    });
+
 
     $('nav > ul > li').hover(
 
@@ -126,6 +116,18 @@ $(document).ready(function() {
         $('.mobile-nav').removeClass('active');
     });
 
+    $('.order-certificate').click(function() {
+
+        $('.window-certificate').fadeIn();
+
+    });
+
+    $('.order-session').click(function() {
+
+        $('.window-photo').fadeIn();
+
+    });
+
     $('.button-callback').click(function() {
 
         $('.window-callback').fadeIn();
@@ -137,6 +139,8 @@ $(document).ready(function() {
         if (!$target.closest($('.window form')).length) $('.window').fadeOut();
         if ($target.hasClass('fa-close')) $('.window').fadeOut();
     });
+
+    $( ".date-widget" ).datepicker();
 
     /*******************************************************************************************************************
      *********** sliders
