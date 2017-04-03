@@ -75,6 +75,7 @@ a, button {
   width: 100%;
   max-width: 1230px;
   margin: 0 auto;
+  position: relative;
 
   @media(max-width: 1260px) {
     padding: 0 15px;
@@ -424,6 +425,25 @@ p {
 
 }
 
+.to-back {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 17px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+  @media(max-width: 1230px) {
+    position: static;
+    margin: -15px 0 20px;
+  }
+
+  @media(max-width: 480px) {
+    font-size: 15px;
+  }
+
+}
+
 /***********************************************************************************************************************
 ************ header
 ***********************************************************************************************************************/
@@ -443,11 +463,11 @@ p {
       background: none;
       color: #000;
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       right: 20px;
 
       @media(max-width: 400px) {
-        bottom: 15px;
+        bottom: 0;
         right: 15px;
       }
 
@@ -1802,6 +1822,116 @@ footer[role='contentinfo'] {
 
 }
 
+/***********************************************************************************************************************
+************ gallery
+***********************************************************************************************************************/
+
+.gallery {
+  .clearfix();
+
+  a {
+    display: block;
+    width: 23.875%;
+    padding-top: 13.28199658703072%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    margin: 0 1.5% 1.5% 0;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 68px;
+      height: 68px;
+      background: url(../source/images/icon-search.png) no-repeat;
+      .smooth(.4s);
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:nth-of-type(4n) {
+      margin: 0 0 1.5% 0;
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      .smooth(2s);
+    }
+
+    &:hover {
+
+      img {
+        left: -15%;
+        top: -15%;
+        min-width: 130%;
+        min-height: 130%;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+
+    }
+
+    @media(max-width: 1230px) {
+      width: 32%;
+      padding-top: 17.80204778156997%;
+      margin: 0 2% 2% 0;
+
+      &:nth-of-type(4n) {
+        margin: 0 2% 2% 0;
+      }
+
+      &:nth-of-type(3n) {
+        margin: 0 0 2% 0;
+      }
+
+    }
+
+    @media(max-width: 980px) {
+      width: 48.5%;
+      padding-top: 26.98122866894198%;
+      margin: 0 3% 3% 0;
+
+      &:nth-of-type(3n),
+      &:nth-of-type(4n) {
+        margin: 0 3% 3% 0;
+      }
+
+      &:nth-of-type(2n) {
+        margin: 0 0 2% 0;
+      }
+
+    }
+
+    @media(max-width: 640px) {
+      width: 100%;
+      padding-top: 55.63139931740614%;
+      margin: 20px 0;
+
+      &:nth-of-type(2n),
+      &:nth-of-type(3n),
+      &:nth-of-type(4n) {
+        margin: 20px 0;
+      }
+
+    }
+
+  }
+
+}
 
 /***********************************************************************************************************************
 ************ gallery-left
@@ -1826,7 +1956,7 @@ footer[role='contentinfo'] {
       position: absolute;
       left: 0;
       top: 0;
-      .smooth(3s);
+      .smooth(2s);
     }
 
     .photo-info {
@@ -1859,11 +1989,10 @@ footer[role='contentinfo'] {
     &:hover {
 
       img {
-        -webkit-transform: scale(1.3) rotate(5deg);
-        -moz-transform: scale(1.3) rotate(5deg);
-        -ms-transform: scale(1.3) rotate(5deg);
-        -o-transform: scale(1.3) rotate(5deg);
-        transform: scale(1.3) rotate(5deg);
+        left: -15%;
+        top: -15%;
+        min-width: 130%;
+        min-height: 130%;
       }
 
       .photo-info {
@@ -1982,7 +2111,7 @@ footer[role='contentinfo'] {
       position: absolute;
       left: 0;
       top: 0;
-      .smooth(3s);
+      .smooth(2s);
     }
 
     .photo-info {
@@ -2015,11 +2144,10 @@ footer[role='contentinfo'] {
     &:hover {
 
       img {
-        -webkit-transform: scale(1.3) rotate(5deg);
-        -moz-transform: scale(1.3) rotate(5deg);
-        -ms-transform: scale(1.3) rotate(5deg);
-        -o-transform: scale(1.3) rotate(5deg);
-        transform: scale(1.3) rotate(5deg);
+        left: -15%;
+        top: -15%;
+        min-width: 130%;
+        min-height: 130%;
       }
 
       .photo-info {
