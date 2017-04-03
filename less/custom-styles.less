@@ -332,7 +332,12 @@ h1 {
   font-weight: 700;
   font-size: 30px;
   color: #e88222;
-  margin-bottom: 20px;
+  margin: 25px 0;
+
+  @media(max-width: 480px) {
+    font-size: 20px;
+  }
+
 }
 
 .main-page h1 {
@@ -341,11 +346,10 @@ h1 {
 }
 
 h2 {
-  text-align: center;
   font-weight: 700;
   font-size: 25px;
   color: #e88222;
-  margin-bottom: 40px;
+  margin: 20px 0;
 
   span {
     display: block;
@@ -365,6 +369,8 @@ h2 {
 
 .main-page h2 {
   font-size: 30px;
+  text-align: center;
+  margin: 0 0 40px;
 
   @media(max-width: 768px) {
     font-size: 20px;
@@ -381,6 +387,7 @@ h3 {
   font-weight: 700;
   font-size: 20px;
   color: #e88222;
+  margin: 20px 0;
 
   @media(max-width: 768px) {
     font-size: 18px;
@@ -392,6 +399,7 @@ h4 {
   font-weight: 700;
   font-size: 17px;
   color: #e88222;
+  margin: 20px 0;
 
   @media(max-width: 768px) {
     font-size: 15px;
@@ -2192,8 +2200,120 @@ footer[role='contentinfo'] {
 }
 
 /***********************************************************************************************************************
-************ header
+************ article
 ***********************************************************************************************************************/
+
+article {
+  display: block;
+  width: 100%;
+
+  .lists {
+    .clearfix();
+  }
+
+  ul,
+  ol {
+    display: block;
+    width: 50%;
+    float: left;
+    list-style: none;
+
+    li {
+      padding: 0 35px;
+      position: relative;
+      margin: 10px 0;
+    }
+
+    @media(max-width: 480px) {
+      float: none;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+  }
+
+  ul {
+
+    li:before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: #ed8f1f;
+      border-radius: 50%;
+      position: absolute;
+      left: 20px;
+      top: .45em;
+    }
+
+  }
+
+  ol {
+    counter-reset: list2;
+
+    li:before {
+      content: counter(list2)'.';
+      counter-increment: list2;
+      color: #df6807;
+      font-size: 14px;
+      font-weight: 600;
+      position: absolute;
+      left: 15px;
+      top: 0;
+    }
+
+  }
+
+  img {
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 0 20px 20px 0;
+  }
+
+  .table-wrap {
+    display: block;
+    width: 100%;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 30px;
+
+    th {
+      background: #3f3a3c;
+      border-right: 1px solid #fff;
+      padding: 15px 30px;
+      font-weight: 700;
+      color: #fff;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    td {
+      background: #f3f3f3;
+      border-right: 1px solid #fff;
+      padding: 15px 30px;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+
+    }
+
+    tr:nth-of-type(2n) td {
+      background: #f9f9f9;
+    }
+
+  }
+
+}
 
 /***********************************************************************************************************************
 ************ header
