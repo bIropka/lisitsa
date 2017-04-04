@@ -349,6 +349,12 @@ p {
   left: 5%;
   z-index: 999;
   cursor: pointer;
+  .smooth(.4s);
+
+  &:hover {
+    background: #1f1d1e;
+  }
+
 }
 
 .to-back {
@@ -1136,7 +1142,6 @@ footer[role='contentinfo'] {
 ***********************************************************************************************************************/
 
 .promo-text {
-  color: #f0a517;
   font-weight: 600;
   font-size: 19px;
   text-align: center;
@@ -2250,6 +2255,18 @@ article {
   display: block;
   width: 100%;
 
+  p {
+
+    a {
+
+      &:hover {
+        text-decoration: none;
+      }
+
+    }
+
+  }
+
   .lists {
     .clearfix();
   }
@@ -2447,8 +2464,6 @@ article {
   button {
     width: 100%;
     margin-top: 25px;
-    background: url(../source/images/background-button-certificate.jpg);
-    background-size: cover;
   }
 
   @media(max-width: 980px) {
