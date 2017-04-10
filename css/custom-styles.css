@@ -867,49 +867,44 @@ footer[role='contentinfo'] .global-idea:hover {
 ************ slider-banner
 ***********************************************************************************************************************/
 .slider-banner {
-  width: 100%;
-  height: 400px;
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .slider-banner {
-    height: 300px;
-  }
   .slider-banner .fa-angle-left,
   .slider-banner .fa-angle-right {
-    bottom: auto;
-    top: -20px;
+    background: none;
+    top: auto;
+    bottom: 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
   }
-  .slider-banner .slide {
-    align-items: flex-end !important;
+  .slider-banner .fa-angle-left {
+    left: auto;
+    right: 50px;
   }
-  .slider-banner .slide .banner-data {
+  .slider-banner .fa-angle-right {
+    right: 0;
+  }
+  .slider-banner .slider .slide {
+    display: block!important;
+  }
+  .slider-banner .slider .slide .banner-data {
+    position: static;
     width: 100%;
     margin-left: 0;
     padding: 20px 25px;
+    background: #333;
   }
-  .slider-banner .slide .banner-data .title {
+  .slider-banner .slider .slide .banner-data .title {
     font-size: 20px;
   }
-  .slider-banner .slide .banner-data span {
+  .slider-banner .slider .slide .banner-data span {
     font-size: 15px;
     margin: 10px 0 20px;
   }
 }
-.slider-banner .slider-wrap {
-  width: 100%;
-  height: 100%;
-}
-.slider-banner .slider {
-  width: 100%;
-  height: 100%;
-}
-.slider-banner .slider .slick-list,
-.slider-banner .slider .slick-track {
-  height: 100%;
-}
 .slider-banner .slider .slide {
-  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -918,14 +913,13 @@ footer[role='contentinfo'] .global-idea:hover {
 }
 .slider-banner .slider img {
   display: block;
-  height: 400px;
-  width: auto;
-  position: absolute;
-  left: 0;
-  top: 0;
+  height: auto;
+  width: 100%;
 }
 .slider-banner .banner-data {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 450px;
   background: rgba(0, 0, 0, 0.57);
   margin-left: 130px;
@@ -1518,25 +1512,6 @@ footer[role='contentinfo'] .global-idea:hover {
   float: left;
   margin: 0 1.5% 1.5% 0;
 }
-.gallery a:before {
-  content: '';
-  display: block;
-  width: 68px;
-  height: 68px;
-  background: url(../source/images/icon-search.png) no-repeat;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-}
 .gallery a:nth-of-type(4n) {
   margin: 0 0 1.5% 0;
 }
@@ -1560,9 +1535,6 @@ footer[role='contentinfo'] .global-idea:hover {
   top: -15%;
   min-width: 130%;
   min-height: 130%;
-}
-.gallery a:hover:before {
-  opacity: 0;
 }
 @media (max-width: 1230px) {
   .gallery a {
@@ -2142,4 +2114,63 @@ article table tr:nth-of-type(2n) td {
     width: 320px;
     top: 50px;
   }
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--left {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: transparent;
+  background: url(../source/images/sprite-controls.png) no-repeat left 0;
+  background-size: cover;
+  opacity: .7;
+  transition: .4s;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--left:hover {
+  opacity: 1;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--left:active {
+  left: 0;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--left:before,
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--left:after {
+  display: none;
+}
+.fancybox-infobar__body span {
+  color: #fff;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: transparent;
+  background: url(../source/images/sprite-controls.png) no-repeat right 0;
+  background-size: cover;
+  opacity: .7;
+  transition: .4s;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--right:hover {
+  opacity: 1;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--right:active {
+  right: 0;
+}
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--right:before,
+.fancybox-show-infobar .fancybox-infobar .fancybox-button--right:after {
+  display: none;
 }

@@ -106,7 +106,7 @@ $(document).ready(function() {
             }
         }
 
-     );
+    );
 
     $('nav .fa-bars').click(function() {
         $('.mobile-nav').addClass('active');
@@ -139,8 +139,6 @@ $(document).ready(function() {
         if (!$target.closest($('.window form')).length) $('.window').fadeOut();
         if ($target.hasClass('fa-close')) $('.window').fadeOut();
     });
-
-    $( ".date-widget" ).datepicker();
 
     /*******************************************************************************************************************
      *********** sliders
@@ -185,5 +183,7 @@ $(document).ready(function() {
             $(dots[i]).find('li').eq(currentSlide).addClass('active');
         }
     });
+
+    $( ".date-widget" ).datepicker();
 
 });
