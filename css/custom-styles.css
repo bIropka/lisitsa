@@ -870,38 +870,8 @@ footer[role='contentinfo'] .global-idea:hover {
   overflow: hidden;
 }
 @media (max-width: 768px) {
-  .slider-banner .fa-angle-left,
-  .slider-banner .fa-angle-right {
-    background: none;
-    top: auto;
-    bottom: 5px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-  }
-  .slider-banner .fa-angle-left {
-    left: auto;
-    right: 50px;
-  }
-  .slider-banner .fa-angle-right {
-    right: 0;
-  }
-  .slider-banner .slider .slide {
-    display: block!important;
-  }
-  .slider-banner .slider .slide .banner-data {
-    position: static;
-    width: 100%;
-    margin-left: 0;
-    padding: 20px 25px;
-    background: #333;
-  }
-  .slider-banner .slider .slide .banner-data .title {
-    font-size: 20px;
-  }
-  .slider-banner .slider .slide .banner-data span {
-    font-size: 15px;
-    margin: 10px 0 20px;
+  .slider-banner {
+    display: none;
   }
 }
 .slider-banner .slider .slide {
@@ -2121,9 +2091,9 @@ article table tr:nth-of-type(2n) td {
   bottom: 0;
   left: 5px;
   margin: auto;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   font-size: 0;
   text-align: center;
   vertical-align: middle;
@@ -2152,9 +2122,9 @@ article table tr:nth-of-type(2n) td {
   bottom: 0;
   right: 5px;
   margin: auto;
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   font-size: 0;
   text-align: center;
   vertical-align: middle;
