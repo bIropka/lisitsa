@@ -2423,7 +2423,7 @@ article {
 }
 
 .fancybox-show-infobar .fancybox-infobar .fancybox-button--left {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 5px;
@@ -2439,6 +2439,7 @@ article {
   background-size: cover;
   opacity: .7;
   transition: .4s;
+  z-index: 999;
 
   &:hover {
     opacity: 1;
@@ -2455,12 +2456,16 @@ article {
 
 }
 
+.fancybox-controls {
+  bottom: 0;
+}
+
 .fancybox-infobar__body span {
   color: #fff;
 }
 
 .fancybox-show-infobar .fancybox-infobar .fancybox-button--right {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   right: 5px;
@@ -2476,6 +2481,7 @@ article {
   background-size: cover;
   opacity: .7;
   transition: .4s;
+  z-index: 999;
 
   &:hover {
     opacity: 1;
